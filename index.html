@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="top.js"></script>
+<body>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            position: fixed;     /* or absolute inside a relative container */
+            bottom: 43%;      /* distance from the bottom of the screen */
+            left: 47%;           /* optional: center horizontally */
+            transform: translateX(-50%);  /* optional: center adjustment */
+           
+        }
+
+        .container img{
+           width:200px;
+        }
+        .hitbox {
+            position: absolute;
+            /* background-color: rgba(255, 0, 0, 0.2); */ /* uncomment for testing */
+        
+          }
+        .hitbox.off{
+            display:none;
+        }
+        #rose{
+            width:50px;
+            top: 8%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            z-index: 11;
+        }
+         .off{
+            display:none;
+       } 
+        .select{
+            border-width:4px;
+            border-radius: 6px;
+            border-color:red;
+            border-style:dashed;
+        }
+
+        .showItem , .notification{
+            position:absolute;
+        }
+        .showItem.border{
+            width: 150px;
+            height: 150px;
+        }
+
+        .showItem.item{
+            top:7%;
+            left:3.5%;
+            width: 60px;
+            height: 70px;
+            
+        }
+
+        .notification{
+            right:20px;
+            bottom:20px;
+            width:170px;
+            height:150px;
+        }
+    </style>
+    <div id="showItem">
+        <img class="showItem border" src="/static/img/showItem.png">
+        <img class="showItem item" id="itemShow" src="/static/img/dumb.png">
+    </div>
+    <div class="container">
+        <img class="box"id="box1" src="static/img/box1.png">
+        <img class="hitbox off" id="rose" sprite="1" selected="false" onclick="selectItem(this)"src="static/img/rose.png">
+    </div>   
+    <div id="notification">
+        <img class="notification"src="/static/img/CtrlXTutorial.png">
+    </div>
+</body> 
+<script src="magic.js"></script>
+<script src="index.js"></script>
+</html>
