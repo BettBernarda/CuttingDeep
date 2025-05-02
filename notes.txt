@@ -1,0 +1,4 @@
+Aparentemente ele nao irá funcionar se você nao estiver em local//host
+
+
+estava pensando em usar o ngrok para server durante a aula se quiser que seja compartilhavel.
